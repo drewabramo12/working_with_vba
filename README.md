@@ -18,14 +18,18 @@ Through the help of groupwork, I was able to refactor the code to have the run t
 ![AllStocks_2018](https://github.com/drewabramo12/working_with_vba/blob/main/AllStocks_2018.PNG)
 ![AllStocksRefactor_2018](https://github.com/drewabramo12/working_with_vba/blob/main/AlStocksRefactor_2018.PNG)
 The run time of 2017 and 2018 stock analyses went from 0.8632813 seconds down to 0.109375 seconds after refactoring. The change that occured was to remove the use of nested `for` loops for 3 separate `for` loops and the creation of output arrays. The creation of output arrays:
-    `Dim tickerVolumes(12) As Long`
-    `Dim tickerStartingPrices(12) As Single`
-    `Dim tickerEndingPrices(12) As Single`
+    ```
+    Dim tickerVolumes(12) As Long
+    Dim tickerStartingPrices(12) As Single
+    Dim tickerEndingPrices(12) As Single
+    ```
 were used to create individual variables that could save ticker values for a single `for` loop. The creation of the variable of `tickerIndex` also became valuable to use within the refactoring as it allowed for the repeated use of `tickerVolumes(tickerIndex)`, `tickerStartingPrices(tickerIndex)`, and `tickerEndingPrices(tickerIndex)`. These arrays meant more memory was used for storing variables but it also meant that fewer lines needed to be read as compared to the original AllStocksAnalysis macro. Another part of code that helped with the efficiency of the code is the conditional statement:
-    `If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then`
-            `tickerEndingPrices(tickerIndex) = Cells(i, 6).Value`            
-            `'3d Increase the tickerIndex.`
-            `tickerIndex = tickerIndex + 1`
+    ```
+    If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
+            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value            
+            '3d Increase the tickerIndex.
+            tickerIndex = tickerIndex + 1
+    ```
 This conditional allows for the second `for` loop to run through the rows once. When the ticker values change in column A, the tickerIndex changes to address the new ticker value and the `for` loop can now use new variables to be used in each of the same conditionals.
 
 ## Summary
@@ -36,3 +40,4 @@ The advantages of refactoring code allows for a deeper understanding of the patt
 
 - How do these pros and cons apply to refactoring the original VBA script?
 
+The pros and cons applied quite closely with the refactoring of the original VBA script. The lines of code became 
