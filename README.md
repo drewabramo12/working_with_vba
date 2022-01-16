@@ -31,7 +31,7 @@ If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers
     '3d Increase the tickerIndex.
     tickerIndex = tickerIndex + 1
 ```
-This conditional allows for the second `for` loop to run through the rows once. When the ticker values change in column A, the tickerIndex changes to address the new ticker value and the `for` loop can now use new variables in each of the same conditionals in the second `for` loop.
+This conditional allows for the second `for` loop to run through the rows once. When the ticker values change in column A, the tickerIndex changes to address the new ticker value and the second `for` loop can now use new variables in each of the same conditionals.
 
 ## Summary
 
