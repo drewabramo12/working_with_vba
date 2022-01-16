@@ -11,7 +11,8 @@ The purpose of this project was to refactor the initial VBA macro AllSocksAnalys
 ## Results
 
 Through the help of groupwork, I was able to refactor the code to have the run times be cut down by up to 
-.06 seconds. As seen in the below imgages.
+.06 seconds. As seen in the below imgages:
+
 ![AllStocks_2017](https://github.com/drewabramo12/working_with_vba/blob/main/AllStocks_2017.PNG)
 ![AllStocksRefactor_2017](https://github.com/drewabramo12/working_with_vba/blob/main/AllStocksRefactor_2017.PNG)
 ![AllStocks_2018](https://github.com/drewabramo12/working_with_vba/blob/main/AllStocks_2018.PNG)
