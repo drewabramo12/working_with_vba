@@ -40,4 +40,4 @@ The advantages of refactoring code allows for a deeper understanding of the patt
 
 - How do these pros and cons apply to refactoring the original VBA script?
 
-The pros and cons applied quite closely with the refactoring of the original VBA script. The lines of code became 
+The pros and cons applied quite closely with the refactoring of the original VBA script. The lines of code became much faster and fewer iteration loops needed to occur. There was quite a bit of debugging that needed to occur for the newly refactored code to run correctly. Most of the bugs occured due to incorrect writing of new variables within the refactored code. This is something that should be alleviated with more practice on projects to come.
