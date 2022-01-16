@@ -17,6 +17,7 @@ Through the help of groupwork, I was able to refactor the code to have the run t
 ![AllStocksRefactor_2017](https://github.com/drewabramo12/working_with_vba/blob/main/AllStocksRefactor_2017.PNG)
 ![AllStocks_2018](https://github.com/drewabramo12/working_with_vba/blob/main/AllStocks_2018.PNG)
 ![AllStocksRefactor_2018](https://github.com/drewabramo12/working_with_vba/blob/main/AlStocksRefactor_2018.PNG)
+
 The run time of 2017 and 2018 stock analyses went from 0.8632813 seconds down to 0.109375 seconds after refactoring. The change that occured was to remove the use of nested `for` loops for 3 separate `for` loops and the creation of output arrays. The creation of output arrays:
 ```
 Dim tickerVolumes(12) As Long
